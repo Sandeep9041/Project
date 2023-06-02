@@ -7,7 +7,6 @@ ul{
     flex-wrap:wrap;
     align-items: flex-start;
     justify-content:center;
-    /* background-color: red; */
 }
 @media screen and (max-width: 768px){
     ul {
@@ -20,10 +19,13 @@ ul{
     color:#ffffff;
     text-align: center;
     font-family: 'Comfortaa', cursive;
+    font-size:41px;
+    line-height:75px;
 }
 @media screen and (max-width: 768px){
     .main-heading{
-    margin-block:31px;
+    margin-block:35px;
+    font-size: 35px;
     }
 }
 li{
