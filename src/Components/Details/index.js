@@ -67,9 +67,9 @@ function autoCorrect(text, correction) {
 return(
     <>
     <Header />
-    <div className="displays">
-        <div className="card">
-        <img src={img} alt="original" className="original-img" /> 
+    <div className="displays" >
+        <div className="card" >
+       <img src={img} alt="original" className="original-img" />
          <div className="content-detail">
          <h1 className="detail-name">{name}</h1>
          <p className="summary">{correctedText}</p>

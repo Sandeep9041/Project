@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
 *{
     margin:0px;
 }
@@ -15,12 +17,10 @@ ul{
 }
 .main-heading{
     font-family:'Roboto', sans-serif; 
-    margin-block: 55px;
-    color:#ffffff;
     text-align: center;
-    font-family: 'Comfortaa', cursive;
-    font-size:41px;
-    line-height:75px;
+    font-size:35px;
+    margin-top:0px;
+    margin-bottom:25px;
 }
 @media screen and (max-width: 768px){
     .main-heading{
@@ -30,13 +30,14 @@ ul{
 }
 li{
     list-style:none;
-    background-color:#000000 ;
-    color: #ffffff;
+    background-color:transparent;
+    color: #000000;
     margin-bottom:35px;
     margin-right:35px;
     font-family: 'Comfortaa', cursive;
     height:431px;
-    border:  1px solid #191919;
+    border: 1px solid #000;
+    border-radius:15px;
     width: 255px;
 }
 @media screen and (max-width: 768px){
@@ -44,21 +45,22 @@ li{
     margin-right:15px;
     }
 }
-img{
-    width:100%
+.img{
+    width:100%;
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;
 }
 .header{
-    padding-inline:15px;
-    background-color:#000000 ;
+    padding-inline:55px;
     padding-block:17px;
-    border-bottom:1px solid #464646 ;
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
+    margin-bottom: 0px;
 }
 .header-heading{
-    font-family: 'Comfortaa', cursive;
-    font-size: 15px;
-    color:white;
+    font-family: "Roboto", sans-serif;
+    font-size: 19px;
+    font-weight:700;
 }
 .name{
     font-family: 'Comfortaa', cursive;
@@ -71,7 +73,7 @@ img{
     width:100%;
     display: flex;
     justify-content: center;
-    background-color:#000000;
+    height: 100%;
     padding-bottom: 55px;
 }
 .containers{

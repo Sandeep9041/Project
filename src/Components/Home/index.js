@@ -6,34 +6,39 @@ import Header from "../header"
 
 const Home = () => {
 
-    const [list,setList] = useState([])
+    const [data, setData] = useState([]);
+  const [error, setError] = useState(null);
 
-    const getData = async() => {
-    const url = "https://api.tvmaze.com/search/shows?q=all"
-    const response = await fetch(url);
-    const data =await response.json();
-    setList(data)
-    }
+const getData = async() => {
+    try {
+        const response = await fetch('https://api.tvmaze.com/search/shows?q=all');
+        const json = await response.json();
+        const updateData = json.filter(each => each.show.id!==65759)
+        // console.log(updateData.length)
+        setData(updateData);
+      } catch (error) {
+        setError(error);
+      }
+} 
 
-    useEffect(()=>{
-        getData();
-    },[])
-
-
-    return (
+useEffect(() => {
+    getData();
+}, [] );
+      return (
         <>
         <Header />
         <div className="bg">
             <div className="containers">
-                <h1 className="main-heading">Shows</h1>
+                <h1 className="main-heading">Top Movies</h1>
                 <div style={{display:"flex",justifyContent:"center"}}>
                     <ul>
-                        {list.map(each=>{
-                            const {image,name,rating} = each.show
+                        {data.map(each=>{
+                            const {image,name,rating} = each.show;
+                            //  console.log(typeof each.show.id)
                                 return(
-                                    <Link to ={`/${each.show.id}`} style={{textDecoration: 'none'}}>
-                                        <li key={each.show.id}>
-                                        <img src={image.medium} alt={name}/>
+                                    <Link key={each.show.id} to ={`/${each.show.id}`} style={{textDecoration: 'none'}}>
+                                        <li >
+                                        <img src={image.medium} alt={name} className="img"/>
                                         <div className="content">
                                         <h3 className="name">{name}</h3>
                                         <div className="star-containers">
